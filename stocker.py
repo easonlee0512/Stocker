@@ -876,7 +876,7 @@ class Stocker():
 
         # Plot formatting
         plt.legend(loc = 2, prop={'size': 10});
-        plt.xticks(rotation = 45)
+        plt.xticks(rotation = 45.0)
         plt.ylabel('Predicted Stock Price (US $)');
         plt.xlabel('Date'); plt.title('Predictions for %s' % self.symbol);
         plt.show()
