@@ -12,6 +12,17 @@ import matplotlib
 
 # Class for analyzing and (attempting) to predict future prices
 # Contains a number of visualizations and analysis methods
+
+# 自動修正 stocker.py 中的 rotation 錯誤
+with open('Stocker/stocker.py', 'r') as file:
+    stocker_code = file.read()
+
+# 將 rotation=45 修改為 rotation=45.0
+stocker_code = stocker_code.replace("rotation=45", "rotation=45.0")
+
+with open('Stocker/stocker.py', 'w') as file:
+    file.write(stocker_code)
+
 class Stocker():
     
     # Initialization requires a ticker symbol
