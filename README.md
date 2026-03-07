@@ -184,20 +184,6 @@ stock.evaluate_prediction()
 # 預測未來 100 天的漲跌走勢
 stock.predict_future(days=100)
 ```
-
-**各步驟說明：**
-
-| 步驟 | 說明 |
-|------|------|
-| `git clone` | 從 GitHub 下載 Stocker 專案 |
-| `pip install` | 安裝所需套件並升級 matplotlib |
-| `read_csv` | 讀取 `price.csv`，以 `date` 為索引轉為 DatetimeIndex Series |
-| `Stocker(price)` | 初始化物件，自動計算最高/最低價與資料涵蓋區間 |
-| `create_prophet_model(days=90)` | 訓練模型並繪製含信賴區間的預測圖，向後預測 90 天 |
-| `changepoint_prior_analysis(...)` | 比較 4 種 CPS 值對預測曲線的影響，輔助參數選擇 |
-| `evaluate_prediction()` | 以最近一年資料回測，輸出 MAE、方向準確率等指標 |
-| `predict_future(days=100)` | 預測未來 100 天，以 🔼🔽 分別標示預測漲跌日期 |
-
 ---
 
 ##  授權
